@@ -1,0 +1,2 @@
+# MatrixResultCpp
+Решение матрицы C++
