@@ -56,7 +56,7 @@ void MatrixFillingText() {
     SetColor(10,0);
     cout << "\t\t\t\t=================" << endl << endl;
     SetColor(11,0);
-    cout << "Note: you can enter all 9 numbers in any 'cell' separated by a space (5 85 -12...)" << endl << endl;
+    cout << "Note: you can enter all 9 numbers in any 'cell' separated by a space (5 -12)" << endl << endl;
 }
 
 int main(int argc, char *argv[]) {
