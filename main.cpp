@@ -5,7 +5,9 @@
 
 using namespace std;
 
-int a1=0,a2=0,a3=0,a4=0,a5=0,a6=0,a7=0,a8=0,a9=0,r=0;// Создаем переменные
+// Создаем переменные
+int cell[9] = {0,0,0,0,0,0,0,0,0};
+int r = 0;
 
 void SetColor(int text, int background) {
     // Функция для подкрашивания текста в консоли с 2-мя аргументами (text - цвет текста, background - фон текста)
@@ -48,9 +50,9 @@ void AddMatrix() {
     cout << "\t\t\t\tFill in the cells" << endl;
     cout << "\t\t\t\t=================" << endl;
     SetColor(13,0);
-    cout << "\t\t\t\t" << a1 << "\t"<<a2<<"\t"<< a3 << endl;
-    cout << "\t\t\t\t" << a4 << "\t"<<a5<<"\t"<< a6 << endl;
-    cout << "\t\t\t\t" << a7 << "\t"<<a8<<"\t"<< a9 << endl;
+    cout << "\t\t\t\t" << cell[0] << "\t"<<cell[1]<<"\t"<< cell[2] << endl;
+    cout << "\t\t\t\t" << cell[3] << "\t"<<cell[4]<<"\t"<< cell[5] << endl;
+    cout << "\t\t\t\t" << cell[6] << "\t"<<cell[7]<<"\t"<< cell[8] << endl;
     SetColor(10,0);
     cout << "\t\t\t\t=================" << endl << endl;
     SetColor(11,0);
@@ -58,57 +60,55 @@ void AddMatrix() {
 }
 
 int main(int argc, char *argv[]) {
-    // setlocale(LC_CTYPE,"Russian");
-    // setlocale(LC_CTYPE, "Russian_Russia.1251");
     SetConsoleTitle("Solving a Matrix by a Simple Method");
     MainMenu();
     AddMatrix();
     cout << "cell 1> ";
-    cin >> a1;
+    cin >> cell[0];
     system("cls");
     MainMenu();
     AddMatrix();
     cout << "cell 2> ";
-    cin >> a2;
+    cin >>  cell[1];
     system("cls");
     MainMenu();
     AddMatrix();
     cout << "cell 3> ";
-    cin >> a3;
+    cin >>  cell[2];
     system("cls");
     MainMenu();
     AddMatrix();
     cout << "cell 4> ";
-    cin >> a4;
+    cin >>  cell[3];
     system("cls");
     MainMenu();
     AddMatrix();
     cout << "cell 5> ";
-    cin >> a5;
+    cin >>  cell[4];
     system("cls");
     MainMenu();
     AddMatrix();
     cout << "cell 6> ";
-    cin >> a6;
+    cin >>  cell[5];
     system("cls");
     MainMenu();
     AddMatrix();
     cout << "cell 7> ";
-    cin >> a7;
+    cin >>  cell[6];
     system("cls");
     MainMenu();
     AddMatrix();
     cout << "cell 8> ";
-    cin >> a8;
+    cin >>  cell[7];
     system("cls");
     MainMenu();
     AddMatrix();
     cout << "cell 9> ";
-    cin >> a9;
+    cin >>  cell[8];
     system("cls");
     MainMenu();
     AddMatrix();
-    r = a1*(a5*a9-a6*a8)-a2*(a4*a9-a6*a7)+a3*(a4*a8-a5*a7);
+    r = cell[0]*(cell[4]*cell[8]-cell[5]*cell[7])-cell[1]*(cell[3]*cell[8]-cell[5]*cell[6])+cell[2]*(cell[3]*cell[7]-cell[4]*cell[6]);
     if (r<0) {
         SetColor(12,0);
         cout << "\t\t\t\tResult: "<< r << endl << endl;
