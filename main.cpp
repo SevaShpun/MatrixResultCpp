@@ -34,7 +34,7 @@ void SetColor(int text, int background) {
     SetConsoleTextAttribute(hStdOut, (WORD)((background << 4) | text));
 }
 
-void MainMenu() {
+void TemplateText() {
     SetColor(14,0);
     cout << "\t\t\t\t=================" << endl;
     cout << "\t\t\t\t  Template 3x3" << endl;
@@ -45,7 +45,7 @@ void MainMenu() {
     cout << "\t\t\t\t=================" << endl;
 }
 
-void AddMatrix() {
+void MatrixFillingText() {
     SetColor(10,0);
     cout << "\t\t\t\tFill in the cells" << endl;
     cout << "\t\t\t\t=================" << endl;
@@ -62,14 +62,14 @@ void AddMatrix() {
 int main(int argc, char *argv[]) {
     SetConsoleTitle("Solving a Matrix by a Simple Method");
     for (int i = 0; i < sizeof(cell)/sizeof(int); i ++ ) {
-        MainMenu();
-        AddMatrix();
+        TemplateText();
+        MatrixFillingText();
         cout << "cell " << i+1 << "> ";
         cin >> cell[i];
         system("cls");
     }
-    MainMenu();
-    AddMatrix();
+    TemplateText();
+    MatrixFillingText();
     r = cell[0]*(cell[4]*cell[8]-cell[5]*cell[7])-cell[1]*(cell[3]*cell[8]-cell[5]*cell[6])+cell[2]*(cell[3]*cell[7]-cell[4]*cell[6]);
     if (r<0) {
         SetColor(12,0);
