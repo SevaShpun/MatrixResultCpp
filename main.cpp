@@ -56,11 +56,11 @@ void MatrixFillingText() {
     SetColor(10,0);
     cout << "\t\t\t\t=================" << endl << endl;
     SetColor(11,0);
-    cout << "Note: you can enter all 9 numbers in 'cell 1' separated by a space (5 85 -12...)" << endl << endl;
+    cout << "Note: you can enter all 9 numbers in any 'cell' separated by a space (5 85 -12...)" << endl << endl;
 }
 
 int main(int argc, char *argv[]) {
-    SetConsoleTitle("Solving a Matrix by a Simple Method");
+    SetConsoleTitle("Solving a Matrix by a Simple Method (C++)");
     for (int i = 0; i < sizeof(cell)/sizeof(int); i ++ ) {
         TemplateText();
         MatrixFillingText();
