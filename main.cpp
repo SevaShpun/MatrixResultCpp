@@ -61,51 +61,13 @@ void AddMatrix() {
 
 int main(int argc, char *argv[]) {
     SetConsoleTitle("Solving a Matrix by a Simple Method");
-    MainMenu();
-    AddMatrix();
-    cout << "cell 1> ";
-    cin >> cell[0];
-    system("cls");
-    MainMenu();
-    AddMatrix();
-    cout << "cell 2> ";
-    cin >>  cell[1];
-    system("cls");
-    MainMenu();
-    AddMatrix();
-    cout << "cell 3> ";
-    cin >>  cell[2];
-    system("cls");
-    MainMenu();
-    AddMatrix();
-    cout << "cell 4> ";
-    cin >>  cell[3];
-    system("cls");
-    MainMenu();
-    AddMatrix();
-    cout << "cell 5> ";
-    cin >>  cell[4];
-    system("cls");
-    MainMenu();
-    AddMatrix();
-    cout << "cell 6> ";
-    cin >>  cell[5];
-    system("cls");
-    MainMenu();
-    AddMatrix();
-    cout << "cell 7> ";
-    cin >>  cell[6];
-    system("cls");
-    MainMenu();
-    AddMatrix();
-    cout << "cell 8> ";
-    cin >>  cell[7];
-    system("cls");
-    MainMenu();
-    AddMatrix();
-    cout << "cell 9> ";
-    cin >>  cell[8];
-    system("cls");
+    for (int i = 0; i < sizeof(cell)/sizeof(int); i ++ ) {
+        MainMenu();
+        AddMatrix();
+        cout << "cell " << i+1 << "> ";
+        cin >> cell[i];
+        system("cls");
+    }
     MainMenu();
     AddMatrix();
     r = cell[0]*(cell[4]*cell[8]-cell[5]*cell[7])-cell[1]*(cell[3]*cell[8]-cell[5]*cell[6])+cell[2]*(cell[3]*cell[7]-cell[4]*cell[6]);
